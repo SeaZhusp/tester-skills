@@ -1,0 +1,31 @@
+{
+  "templates": {
+    "default": {
+      "file": "测试用例模板.xlsx",
+      "type": "xlsx",
+      "description": "默认测试用例模板（功能测试）",
+      "columns": [
+        {"index": 0, "key": "case_id", "name": "用例编号", "required": true, "example": "TC_001"},
+        {"index": 1, "key": "module", "name": "所属模块", "required": true, "example": "登录模块"},
+        {"index": 2, "key": "case_name", "name": "用例标题", "required": true, "example": "正常登录成功"},
+        {"index": 3, "key": "case_type", "name": "用例类型", "required": true, "example": "功能测试"},
+        {"index": 4, "key": "priority", "name": "优先级", "required": true, "example": "P0"},
+        {"index": 5, "key": "precondition", "name": "前置条件", "required": true, "example": "用户已注册账号"},
+        {"index": 6, "key": "test_steps", "name": "测试步骤", "required": true, "example": "1. 输入用户名\\n2. 输入密码\\n3. 点击登录"},
+        {"index": 7, "key": "expected_result", "name": "预期结果", "required": true, "example": "1.输入框显示对应内容\\n2.密码显示为***\\n3.登录成功，跳转首页"},
+        {"index": 8, "key": "remark", "name": "备注", "required": false, "example": ""}
+      ]
+    }
+  },
+  "default_template": "default",
+  "case_type_options": ["功能测试", "边界测试", "异常测试", "权限测试", "网络异常测试", "并发测试", "场景测试"],
+  "priority_options": ["P0", "P1", "P2"],
+  "case_filter_keywords": {
+    "exclude_reverse": ["不要异常", "不要反向", "没有反例"],
+    "exclude_boundary": ["不要边界", "不要边界值"],
+    "exclude_permission": ["不要权限", "不测权限"],
+    "exclude_network": ["不要网络", "不测弱网"],
+    "exclude_concurrency": ["不要并发", "不测并发"],
+    "dashboard_mode": ["dashboard", "首页", "展示型", "没有异常"]
+  }
+}
