@@ -13,6 +13,7 @@ tester-skills/
 ├── skills/                              # 技能目录
 │   ├── testcase-generator/              # 测试用例编写与导出
 │   ├── testcase-review/                 # 测试用例评审
+│   ├── qa-suite/                        # 测试服务全流程总控
 │   ├── api-testcase-generator/          # API 接口测试用例生成
 │   ├── api-index-sync-apifoxmcp/        # 接口索引同步（Apifox）
 │   ├── api-script-gen-with-apifoxmcp/   # 接口自动化脚本生成（Apifox）
@@ -25,7 +26,8 @@ tester-skills/
 │   ├── fireworks-tech-graph/            # 技术图表生成
 │   ├── wechat-article-writer/           # 公众号技术文章创作
 │   ├── wechat-article-rewriter/         # 公众号文章伪原创改写
-│   └── wechat-multi-article-rewriter/   # 公众号多篇热点整合改写
+│   ├── wechat-multi-article-rewriter/   # 公众号多篇热点整合改写
+│   └── skill-creator/                   # 自定义技能创建指南
 ├── README.md
 ├── .gitignore
 └── LICENSE
@@ -37,6 +39,7 @@ tester-skills/
 |----------|------|------|
 | testcase-generator | 用例设计 | 针对 PRD/原型/接口文档/用户故事，提炼全维度测试点，编写并审核测试用例，导出 Excel/CSV 导入禅道、TestRail、飞书多维表格 |
 | testcase-review | 用例评审 | 对比 Excel 测试用例与 Word/PDF/PRD/图片需求文档，识别功能覆盖缺口，输出补充建议 |
+| qa-suite | 测试服务 | 测试服务全流程总控（1 总控 + 4 子技能），覆盖「需求解构 → 用例生成 → 售前评估/报价 → 一致性核销」全链路，自动路由到对应子技能 |
 | api-testcase-generator | 接口测试 | 根据 Swagger/OpenAPI 生成接口测试用例与自动化脚本，支持 Pytest/Postman/JMeter/Excel 多格式输出 |
 | api-index-sync-apifoxmcp | 接口测试 | 同步 Apifox 接口索引缓存，支持全量/差异刷新，与最新 OpenAPI Spec 对齐 |
 | api-script-gen-with-apifoxmcp | 接口测试 | 基于 Apifox MCP 与接口索引，在 api-auto-test 框架内生成单接口/多接口串联自动化脚本 |
@@ -50,6 +53,7 @@ tester-skills/
 | wechat-article-writer | 公众号 | 公众号爆款技术文章创作（选题、标题、封面图、多平台适配），10%引入+10%原理+80%实操 |
 | wechat-article-rewriter | 公众号 | 公众号文章深度伪原创改写（去 AI 味、规避查重、爆款标题、推流适配） |
 | wechat-multi-article-rewriter | 公众号 | 多篇同主题热点文章去重、提炼、重组为原创长文 |
+| skill-creator | 工具 | 创建和维护自定义技能的指南（新增/更新 agent 技能，沉淀专业知识、工作流或工具集成） |
 
 > 注：`docx`、`pdf`、`xlsx` 三个技能采用各自的专有许可（见对应目录下的 LICENSE.txt），其余技能遵循项目根目录的 MIT License。
 

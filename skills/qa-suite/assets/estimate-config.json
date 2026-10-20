@@ -1,0 +1,41 @@
+{
+  "version": "2.0",
+  "说明": "qa-suite 评估参数唯一来源。禁止在 SKILL.md 或其他文档中硬编码这些数值（套装共享契约 #7）。",
+
+  "_字段说明": {
+    "口径前提": "全部参数按「聚合用例口径」标定：1 用例 = 1 个可独立执行的业务操作场景，承载 2~4 个测试点。若改回细碎用例口径，产能参数必须同步上调约 3 倍。",
+    "smoke_ratio": "冒烟用例占总用例的基准比例。缺省时脚本用「总数 × 该值」估冒烟数。",
+    "smoke_ratio_range": "冒烟占比合理区间，仅用于校验提示，不参与计算。偏高→疑漏普通用例；偏低→疑漏核心主流程。",
+    "productivity.case_design_per_day": "人均每日设计用例条数。按聚合用例口径标定：一条用例含 2~4 组步骤/预期 + 前置条件，故取 120。",
+    "productivity.case_execution_per_day": "人均每日执行用例条数。按聚合用例口径标定：一条用例含多组校验步骤，执行耗时上升，故取 45。",
+    "productivity.regression_per_day": "人均每日回归用例条数。回归只跑缺陷修复相关步骤，略快于首轮，故取 60。",
+    "phase_ratios.review_ratio": "用例评审工作量比例：评审人天 = 设计人天 × 该值。",
+    "phase_ratios.env_prep_ratio": "环境与数据准备比例：人天 = 设计人天 × 该值，且最低 1 人天。",
+    "phase_ratios.report_days": "测试报告与收尾的固定人天。",
+    "regression_scope_ratio": "回归范围比例：首轮总数中有该比例需要回归。",
+    "buffer_ratio": "缓冲比例，用于应对需求变更/返工/突发状况。",
+    "parallel_efficiency": "并行效率比例。团队有效产出 = 人数 × 该值。",
+    "workdays_per_week": "每周工作天数，用于自然日与周的换算。",
+    "calibration": "上述产能参数为经验初值。首次交付后必须由 qa-audit-engine 执行校准回填（见 references/04-counting-and-conversion.md 第 8 节），经用户确认后由总控统一修改本文件。"
+  },
+
+  "smoke_ratio": 0.10,
+  "smoke_ratio_range": [0.08, 0.15],
+
+  "productivity": {
+    "case_design_per_day": 120,
+    "case_execution_per_day": 45,
+    "regression_per_day": 60
+  },
+
+  "phase_ratios": {
+    "review_ratio": 0.20,
+    "env_prep_ratio": 0.10,
+    "report_days": 1.0
+  },
+
+  "regression_scope_ratio": 0.30,
+  "buffer_ratio": 0.15,
+  "parallel_efficiency": 0.90,
+  "workdays_per_week": 5
+}
